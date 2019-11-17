@@ -34,15 +34,18 @@ del Y['tipo']
 
 
 X_train, X_test, y_train, y_test = train_test_split(
-    X, Y, test_size=0.4, random_state=1)
+    X, Y, test_size=0.80, random_state=1)
 
 
-clf = RandomForestClassifier()
+clf = DecisionTreeClassifier()
 
 # # Train Decision Tree Classifer
 clf.fit(X_train, y_train)
 
+print(y_train)
+
 y_pred = clf.predict(X_test)
 
-print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
+print(y_pred)
 
+print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
