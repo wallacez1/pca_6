@@ -11,11 +11,11 @@ from sklearn.metrics import accuracy_score
 from sklearn.svm import SVC
 filmes = pd.read_csv('./data.csv')
 
-filmes = filmes.dropna()
 
 filmes.rename(columns={"Nome": "nome", "Classificação(Anderson)": "nota",
                        "Tipo": "tipo", "Categoria": "categoria"}, inplace=True)
 
+print(filmes.shape)
 del filmes['Orçamento']
 del filmes['Diretor']
 del filmes['nome']
