@@ -26,8 +26,7 @@ X = pd.get_dummies(
 
 del X['nota']
 
-Y = pd.get_dummies(
-    filmes, prefix=['nota'], columns=['nota'])
+Y = pd.get_dummies(filmes, prefix=['nota'], columns=['nota'])
 
 del Y['categoria']
 del Y['tipo']
